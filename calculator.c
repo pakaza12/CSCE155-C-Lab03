@@ -30,7 +30,35 @@ int main(int argc, char **argv) {
   scanf("%d", &choice);
 
   //TODO: process the results here
-
+  double answer;
+  if (choice == 1) {
+    answer = a + b;
+    printf("%f\n", answer);
+  } else if (choice == 2) {
+      answer = a - b;
+    printf("%f\n", answer);
+  } else if (choice == 3) {
+      answer = a * b;
+      printf("%f\n", answer);
+  } else if (choice == 4 && b != 0) {
+      answer = a / b;
+      printf("%f\n", answer);
+  }  else if (choice == 5) {
+      if (a > b) {
+          printf("%f\n", a);
+      } else if (b > a) {
+          printf("%f\n", b);
+      }
+  } else if (choice == 6) {
+      answer = pow(a, b);
+      printf("%f\n", answer);
+  } else if (choice == 7 && a >= 0 && b >= 0) {
+      answer = log(b) / log(a);
+      printf("%f\n", answer);
+  } else {
+      printf("Error: Invalid Input\n");
+    return 0;
+  }
 
   return 0;
 }

@@ -1,6 +1,6 @@
 /**
- * This program determines if various years are leap years or not.
- *
+ * Parker Zach, Daniel Godoy
+ * Lab 03
  */
 #include<stdlib.h>
 #include<stdio.h>
@@ -52,6 +52,35 @@ int main(int argc, char **argv) {
   }
 
   //TODO: write at least 3 more of your own test cases
+  year = 2005;
+  printf("Test case 4: year = %d: ", year);
+  if(isLeapYear(year)) {
+    printf("FAILED!\n");
+    numFailed = numFailed + 1;
+  } else {
+    printf("PASSED\n");
+    numPassed = numPassed + 1;
+  }
+
+  year = 2060;
+  printf("Test case 5: year = %d: ", year);
+  if(isLeapYear(year)) {
+    printf("FAILED!\n");
+    numFailed = numFailed + 1;
+  } else {
+    printf("PASSED\n");
+    numPassed = numPassed + 1;
+  }
+
+  year = 2088;
+  printf("Test case 5: year = %d: ", year);
+  if(isLeapYear(year)) {
+    printf("FAILED!\n");
+    numFailed = numFailed + 1;
+  } else {
+    printf("PASSED\n");
+    numPassed = numPassed + 1;
+  }
 
   printf("\n\n");
   printf("Summary:\n");
@@ -67,4 +96,12 @@ int isLeapYear(int year) {
   //      The year is stored in the variable year
   //      Your function should return true (1) if it represents a leap year
   //      and false (0) if it does not.
+
+  if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0) {
+    return 1;
+  } else {
+    return 0;
+  }
+
+
 }
