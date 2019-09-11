@@ -44,9 +44,9 @@ int main(int argc, char **argv) {
       answer = a / b;
       printf("%f\n", answer);
   }  else if (choice == 5) {
-      if (a > b) {
+      if (a < b) {
           printf("%f\n", a);
-      } else if (b > a) {
+      } else if (b < a) {
           printf("%f\n", b);
       }
   } else if (choice == 6) {
